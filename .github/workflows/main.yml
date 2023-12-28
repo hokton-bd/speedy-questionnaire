@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup SSH
-        uses: svenstar/ssh-action@v2
+        uses: svenstaro/ssh-action@v2
         with:
           ssh-key: ${{ secrets.SSH_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
