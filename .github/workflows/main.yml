@@ -24,4 +24,4 @@ jobs:
           ssh ${{ secrets.SSH_HOST }} "cp -r ~/publi_html/hokton.work/speedy-question/"
 
       - name: Restart web server
-        run: ssh ${{ secrets.SSH_HOST }} "service nginx restart"
+        run: ssh ${{ secrets.SSH_HOST }} "service apache2 restart"
