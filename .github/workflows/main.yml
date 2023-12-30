@@ -30,3 +30,5 @@ jobs:
               echo 'Hello'
               cd $PROD_PATH
               pwd
+              git log
+              git remote -v
