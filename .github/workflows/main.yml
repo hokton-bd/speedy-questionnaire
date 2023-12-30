@@ -27,4 +27,4 @@ jobs:
             script: |
               cd "$PROD_PATH"
               pwd
-              git branch
+              git remote -v
