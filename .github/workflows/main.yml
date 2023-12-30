@@ -16,5 +16,5 @@ jobs:
         with:
           key: ${{ secrets.SSH_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
-          first_ssh: |
-            pwd
+      - name: push_to_prod
+        run: ssh server "echo 'hogehoge'"
