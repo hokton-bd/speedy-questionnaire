@@ -24,8 +24,6 @@ jobs:
             passphrase: ${{ secrets.SSH_PASSPHRASE }}
             username: ${{ secrets.SSH_USER }}
             port: ${{ secrets.SSH_PORT }}
+            debug: true
             script: |
-              pwd
-              cd "$PROD_PATH"
-              pwd
-              git log
+              whoami
