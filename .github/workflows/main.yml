@@ -23,5 +23,4 @@ jobs:
             username: ${{secrets.SSH_USER}}
             port: ${{secrets.SSH_PORT}}
             script: |
-              pwd
-              echo 'Hello world'
+              git pull
