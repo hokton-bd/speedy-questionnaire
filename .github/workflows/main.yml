@@ -26,4 +26,5 @@ jobs:
             port: ${{ secrets.SSH_PORT }}
             script: |
               cd "$PROD_PATH"
-              git log
+              pwd
+              git branch
