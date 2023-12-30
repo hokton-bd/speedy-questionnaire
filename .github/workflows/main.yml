@@ -26,4 +26,4 @@ jobs:
             port: ${{ secrets.SSH_PORT }}
             script: |
               cd "$PROD_PATH"
-              git pull
+              git pull origin main
