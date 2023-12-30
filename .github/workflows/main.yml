@@ -26,5 +26,4 @@ jobs:
             port: ${{ secrets.SSH_PORT }}
             script: |
               cd "$PROD_PATH"
-              pwd
-              git remote -v
+              git pull
