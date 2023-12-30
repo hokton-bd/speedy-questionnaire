@@ -16,11 +16,14 @@ jobs:
             SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }} ]
         - name: ssh set up
           uses: appleboy/ssh-action@master
+          env: 
+            PROD_PATH: ${{ secrets.PROD_PATH }}
           with:
             key: ${{ secrets.SSH_KEY }}
-            host: ${{secrets.SSH_HOST}}
-            passphrase: ${{secrets.SSH_PASSPHRASE}}
-            username: ${{secrets.SSH_USER}}
-            port: ${{secrets.SSH_PORT}}
+            host: ${{ secrets.SSH_HOST }}
+            passphrase: ${{ secrets.SSH_PASSPHRASE }}
+            username: ${{ secrets.SSH_USER }}
+            port: ${{ secrets.SSH_PORT }}
             script: |
-              git pull
+              cd "$PROD_PATH"
+              git log
