@@ -28,4 +28,4 @@ jobs:
             envs: PROD_PATH
             script: |
               cd $PROD_PATH
-              git pull
+              git pull origin main
