@@ -25,5 +25,8 @@ jobs:
             username: ${{ secrets.SSH_USER }}
             port: ${{ secrets.SSH_PORT }}
             debug: true
+            envs: PROD_PATH
             script: |
-              whoami
+              echo 'Hello'
+              cd $PROD_PATH
+              pwd
