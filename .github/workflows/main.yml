@@ -25,5 +25,7 @@ jobs:
             username: ${{ secrets.SSH_USER }}
             port: ${{ secrets.SSH_PORT }}
             script: |
+              pwd
               cd "$PROD_PATH"
-              git pull origin main
+              pwd
+              git log
